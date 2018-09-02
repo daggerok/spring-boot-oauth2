@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>OAuth2</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/webjars/material-design-icons/3.0.1/material-icons.css">
+  <link rel="stylesheet" href="/webjars/materializecss/1.0.0-rc.2/css/materialize.min.css">
+</head>
+<body>
+<h1 class="pulse">
+  [[${message}]]
+  <a class="btn-floating pulse"><i class="material-icons">menu</i></a>
+  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+</h1>
+<script src="/webjars/materializecss/1.0.0-rc.2/js/materialize.min.js"></script>
+<!--<script !src="">M.AutoInit(document.body);</script>-->
+<script src="../static/main.js"
+        th:src="@{../static/main.js}"></script>
+</body>
+</html>
