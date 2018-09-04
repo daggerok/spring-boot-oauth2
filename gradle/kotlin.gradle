@@ -10,9 +10,6 @@ allprojects {
   def projectFreeCompileArgs = [
       '-Xjsr305=strict',
       '-java-parameters',
-      //1.2.41:
-      //"-Xenable-jvm-default",
-      //1.2.50:
       "-Xjvm-default=compatibility",
   ]
 

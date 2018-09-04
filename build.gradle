@@ -1,8 +1,8 @@
 buildscript {
   ext {
-    javaVersion = JavaVersion.VERSION_1_8
     springBootVersion = '2.0.4.RELEASE'
-    springCloudVersion = 'Finchley.SR1'
+    springCloudVersion = 'Finchley.RELEASE'
+    javaVersion = JavaVersion.VERSION_1_8
     jacksonKotlinVersion = '2.9.6'
     lombokVersion = '1.18.2'
     logbackVersion = '1.2.3'
@@ -30,8 +30,6 @@ buildscript {
     classpath "org.asciidoctor:asciidoctorj-pdf:$asciidoctorjPdfVersion"
   }
 
-  //// spring-boot versions overriding, be careful with it!
-  // In our case we are fixing PhantomJS (replacing older spring-boot version):
   ext['selenium.version'] = "$seleniumDriverVersion"
 }
 
@@ -58,12 +56,10 @@ plugins {
   id 'io.qameta.allure' version '2.5' apply false
 }
 
-/*
 wrapper {
   gradleVersion = '4.10'
   distributionType = 'BIN'
 }
-*/
 
 apply from: "$projectDir/gradle/repositories.gradle"
 apply from: "$projectDir/gradle/ide.gradle"
@@ -73,9 +69,7 @@ apply from: "$projectDir/gradle/kotlin.gradle"
 apply from: "$projectDir/gradle/spring-boot.gradle"
 apply from: "$projectDir/gradle/junit.gradle"
 apply from: "$projectDir/gradle/findbugs.gradle"
-//apply from: "$projectDir/gradle/jacoco.gradle"
-//apply from: "$projectDir/gradle/allure.gradle"
-//apply from: "$projectDir/gradle/selenide.gradle"
-//apply from: "$projectDir/gradle/publish.gradle"
+apply from: "$projectDir/gradle/jacoco.gradle"
+apply from: "$projectDir/gradle/selenide.gradle"
 apply from: "$projectDir/gradle/docker-compose.gradle"
 apply from: "$projectDir/gradle/docs.gradle"

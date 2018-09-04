@@ -2,7 +2,7 @@
 
 //tag::content[]
 
-Status: in progress...
+Status: in progress... (see link:https://github.com/daggerok/oauth2-jdbc-example[GitHub: daggerok/oauth2-jdbc-example])
 
 Read link:https://daggerok.github.io/spring-boot-oauth2[project reference documentation]
 
